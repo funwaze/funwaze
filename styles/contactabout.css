@@ -1,0 +1,150 @@
+:root{
+  --main-radius:5px;
+  --main-padding:5px;
+    font-family: "Inter", Sans-serif; 
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.maincontainer {
+margin: 0px;
+margin-top: 10px;
+margin-bottom: 10px;
+display: grid;
+color: black;
+height: 100vh;
+grid-template-columns: repeat(4,1fr); 
+grid-template-rows: (.2fr 2fr auto 1fr 1fr 1fr); 
+grid-template-areas:
+"nav nav nav nav"
+"phead phead phead phead"
+"caheader caheader caheader caheader"
+"contactAbout contactAbout contactAbout contactAbout"
+"paddedspace paddedspace paddedspace paddedspace"
+"footer footer footer footer";
+
+}
+
+ 
+
+
+#phead {
+  background-color: #F56600;
+  background-color: #66B032;
+
+ background-repeat: no-repeat; 
+ background-size: cover; 
+  height: 250px;
+  grid-area: phead;
+  color: #F5F5F5;
+  font-size: 25px;  
+  font-weight: 100;
+    width: 100%;
+  padding-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+  text-align: center;
+  }
+  
+#caheader {
+	
+	background-color: white;
+ /* background-color: #66B032; */
+  background-repeat: no-repeat; 
+ background-size: cover; 
+  height: 700px;
+  grid-area: caheader;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+  /*  width: 100%; */
+  padding-top: 50px;
+  padding-left: 400px;
+  padding-bottom: 30px;
+
+  }
+
+
+  
+  .contactAbout {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap to the next line */
+	gap: 20px;
+	
+}
+
+  
+.contactAbout {
+    width: 75%; /* Adjust width as needed */
+    height: 590px; /* Adjust height as needed */
+   
+    text-align: left;
+	border-radius: 6px;
+	padding: 20px;
+	padding-left: 50px;
+	background-color: #EBF7E3;
+	background-color: #F7F7F7;
+	
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+}
+#cform {
+	width: 45%
+}
+  
+#fname {
+  width: 500px;
+  height: 15px;
+  padding: 12px;
+ }
+ #email {
+  width: 500px;
+  height: 15px;
+  padding: 12px;
+ }
+#state {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  
+ }
+  #subject {
+  width: 500px;
+  height: 15px;
+  padding: 12px;
+  
+ } 
+  
+ #subjecttext {
+  width: 500px;
+  height: 15px;
+  padding: 12px;
+  
+ }  
+ #cimage {
+  background-color: #F7F7F7;
+  width: 45%;
+   }
+    #aimage {
+  background-color: yellow;
+  background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2023-03/fun-things-to-do-with-friends-mc-230317-copy-00589f.jpg");
+  background-image: url("https://i0.wp.com/consciouslivingtv.com/wp-content/uploads/2018/11/friendsmulticultural.jpg?fit=800%2C533&ssl=1");
+  width: 45%;
+ background-repeat: no-repeat; 
+ background-size: cover; 
+   }
+  
+  #csubmit {
+	  padding: 5px;
+  background-color: #66B032;
+  width: 120px;
+  height: 35px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 20px;
+  
+   
+  
+ } 
+  
+  

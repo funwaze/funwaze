@@ -1,0 +1,194 @@
+
+:root{
+  --main-radius:5px;
+  --main-padding:5px;
+    font-family: "Inter", Sans-serif; 
+  font-weight: 800;
+  font-size: 12px;
+}
+
+#nav{
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #32373c;
+	grid-area: nav;
+	height: 50px;
+	 overflow: hidden;
+	color: white;
+	font-size: 25px;
+	padding-left: 30px;
+	padding-top: 20px;
+	
+	font-weight: 100;
+	/*box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+	
+	
+}
+
+.navlogo {
+	display: inline;
+	float: left;
+	text-align: left;
+	width: 50%;
+	text-decoration-color: white;
+	text-decoration: none;
+}
+
+a {
+	color: #66B032;
+}
+
+.navlogo a:hover {
+  color: white;
+  
+}
+
+.navbuttons {
+	display: inline;
+	float: right;
+	text-align: right;
+	width: 50%;
+	font-size: 18px;
+	
+	
+	}
+	
+.navbuttons a:hover {
+  background-color: #66B032;
+  color: black;
+}
+
+
+  
+footer {
+  background-color: #32373c;
+  grid-area: footer;
+  color: #F5F5F5;
+  font-size: 18px;  
+  padding: 10px;
+  height: 350px;
+  display: flex;
+  }
+
+#footcolumn1 {
+	width: 25%;
+	//background-color: blue;
+	font-size: 25px;
+	padding: 30px;
+	//padding-top: 20px;
+	font-weight: 100;
+	
+}
+
+#footcolumn2 {
+	width: 25%;
+	//background-color: #222222;
+	padding: 30px;
+	//padding-top: 20px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #66B032;
+	letter-spacing: 1px;
+}
+
+#footcolumn3 {
+	width: 25%;
+	//background-color: orange;
+	padding: 30px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #66B032;
+	
+}
+
+#footcolumn4 {
+	width: 25%;
+	//background-color: green;
+	padding: 30px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #66B032;
+	letter-spacing: 1px;
+}
+
+#subemail {
+	width: 260px;
+	height: 25px;
+	
+}
+#subfname {
+	width: 125px;
+	height: 25px;
+	
+}
+#subzip {
+	width: 125px;
+	height: 25px;
+	
+}
+#signup {
+	font-size: 16px;
+	color: white;
+	
+	
+}
+#note {
+	font-size: 16px;
+	color: white;
+	letter-spacing: 1px;
+	
+}
+.emailButton {
+	width: 270px;
+	height: 32px;
+	border-radius: 6px;
+	font-size: 16px;
+	color: white;
+	background-color: #66B032;
+}
+
+
+
+.fa-brands {
+  padding: 5px;
+  width: 27px;
+  height: 27px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fa-linkedin-in {
+  background: #007bb5;
+  background: #66B032;
+  font-size: 25px;
+  color: white;
+  
+}
+.fa-youtube {
+  background: #bb0000;
+  background: #66B032;
+  font-size: 23px;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  background: #66B032;
+   font-size: 25px;
+  color: white;
+}
+.fa-tiktok {
+  background: #125688;
+  background: #66B032;
+   font-size: 25px;
+  color: white;
+}
+ .paddedspace {
+  background-color: #EBF7E3;
+  grid-area: paddedspace;
+  color: black;
+  font-size: 18px;  
+  padding: 30px;
+  height: 300px;
+  }

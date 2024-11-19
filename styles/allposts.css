@@ -1,0 +1,71 @@
+:root{
+  --main-radius:5px;
+  --main-padding:5px;
+    font-family: "Inter", Sans-serif; 
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.maincontainer {
+margin: 0px;
+margin-top: 10px;
+margin-bottom: 10px;
+display: grid;
+color: black;
+height: 100vh;
+grid-template-columns: repeat(4,1fr); 
+grid-template-rows: (.2fr 2fr 1fr 1fr 1fr); 
+grid-template-areas:
+"nav nav nav nav"
+"phead phead phead phead"
+"allposts allposts allposts allposts"
+"paddedspace paddedspace paddedspace paddedspace"
+"footer footer footer footer";
+
+}
+
+ 
+
+
+#phead {
+  background-color: #F56600;
+  background-color: #66B032;
+
+ background-repeat: no-repeat; 
+ background-size: cover; 
+  height: 250px;
+  grid-area: phead;
+  color: #F5F5F5;
+  font-size: 25px;  
+  font-weight: 100;
+    width: 100%;
+  padding-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+  text-align: center;
+  }
+  
+
+ #allposts {
+  background-color: white;
+  height: 100%;
+  grid-area: allposts;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+  width: 100%;
+  padding-top: 50px;
+  padding-left: 250px;
+  padding-bottom: 50px;
+ 
+  }
+  #allpostsposts{
+	  width: 1200px;
+	  padding-left: 100px;
+  }
+
+
+
+  
+
+  
+  

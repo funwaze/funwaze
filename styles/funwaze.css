@@ -1,0 +1,254 @@
+:root{
+  --main-radius:5px;
+  --main-padding:5px;
+    font-family: "Inter", Sans-serif; 
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.maincontainer {
+margin: 0px;
+margin-top: 10px;
+margin-bottom: 10px;
+display: grid;
+color: black;
+height: 50vh;
+grid-template-columns: repeat(4,1fr); 
+grid-template-rows: (.2fr 2fr auto 1fr 1fr 1fr); 
+grid-template-areas:
+"nav nav nav nav"
+"head head head head"
+"filterb filterb filterb filterb"
+"mainr mainr mainr sidebar"
+"paddedspace paddedspace paddedspace paddedspace"
+"footer footer footer footer";
+
+}
+
+/*@media (min-width: 40em) { */
+/* .maintontainer {*/
+/* grid-template-columns: repeat(2, 1fr);*/
+/*}*/
+/*}*/
+
+/*@media (min-width: 60em) {*/
+/* .maintontainer {*/
+/* grid-template-columns: repeat(4, 1fr);*/
+/*}*/
+/*}*/
+
+
+/*.filters{*/
+/*width: 200px;*/
+/*margin: 0 auto;*/
+/*display: inline;*/
+/*}*/
+
+.filterbuttons
+{
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  color: black;
+  border-radius: 10px;
+  border-color: #eef3f8;
+}
+.searchButton{
+  margin-left: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-weight: bold;
+  width: 150px;
+  height: 38px;
+  border-radius: 6px;
+  font-size: 25px;
+     
+}
+.active, .searchButton:hover {
+  background-color: #ccc; 
+}
+
+#head {
+  background-color: #F56600;
+  background-color: #66B032;
+  /*background-color: #651fff; */
+ 
+  /*background-image: linear-gradient(#74b9ff, #32373c); */ 
+/* background-image: url("https://media.istockphoto.com/id/491994639/photo/fish-lake-reflection.jpg?s=612x612&w=0&k=20&c=BZr1UtiErZ7otNlz2MBCkGGw_-_Afb5tfQfYtnNBiyo="); */
+//background-image: url("https://static.euronews.com/articles/programs/programs-bg/1180x300_bg-explore.jpg"); 
+//background-image: url("https://selwyncomed.arlo.co/content/img/Solo%20Travel%20for%20Women%20850%20x%20566px.jpg");
+//background-image: url("https://organized31.com/wp-content/uploads/2019/05/kids-at-beach.jpg");
+//background-image: url("https://media1.thrillophilia.com/filestore/mgac4dsd6bath7whtafidxvthqzc_shutterstock_368832815.jpg?h=632&w=auto&dpr=1");
+//background-image: url("https://static.vecteezy.com/system/resources/previews/002/889/936/original/city-park-illustration-for-people-doing-sport-relaxing-playing-or-recreation-with-green-tree-and-lawn-scenery-urban-background-vector.jpg");
+//background-image: url("https://www.shutterstock.com/image-vector/vector-illustration-green-city-park-260nw-737540950.jpg");
+ background-repeat: no-repeat; 
+ background-size: cover; 
+  height: 350px;
+  grid-area: head;
+  color: #F5F5F5;
+  font-size: 38px;  
+  font-weight: 100;
+    width: 100%;
+  padding-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+  text-align: center;
+  }
+  
+#time{
+	height: 30px;
+	width: 300px;
+	font-size: 20px;
+}
+#zip{
+	height: 30px;
+	width: 100px;
+	font-size: 20px;
+}
+#filterb {
+  padding-top: 20px;
+  grid-area: filterb;
+  margin-left: 20px;
+  }
+
+.sidebar {
+	padding: 30px;
+  background-color: white;
+  grid-area: sidebar;
+  color: black;
+  font-size: 18px;  
+  
+  }
+
+#mainr {
+  	
+  grid-area: mainr;
+  color: black;
+  font-size: 18px;  
+  padding: 10px;
+  }
+
+  
+
+
+.emailButton {
+	width: 270px;
+	height: 32px;
+	border-radius: 6px;
+	font-size: 16px;
+	color: white;
+	background-color: #66B032;
+}
+
+
+.mainresults {
+  height: 80%;
+  font-family: "Inter", Sans-serfi;
+  font-weight: 800;
+  font-size: 12px;
+  }
+.accordion {
+  background-color: #eee;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 99%;
+  height: 40px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.active, .accordion:hover {
+  background-color: #9BD770; 
+}
+.active, .buttbutt:hover {
+  background-color: #EBF7E3; 
+}
+
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  height: 100px;
+  overflow: hidden;
+}
+
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	border: 5px solid white;
+	border-radius: 6px;
+	z-index:10;
+	background-color: white;
+	width: 800px;
+	max-width: 80%;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+	}
+	
+.modal.active{
+	transform: translate(-50%, -50%) scale(1);
+	
+}
+
+
+.mainr.active{
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+	
+	background-color: #F56600;  /*clemon orange */
+	background-color: #9BD770; /*light green */
+	background-color: #66B032;
+/*	background-color: #651fff; */
+	font-size: 20px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	color: white;
+	
+}	
+
+.modal-body {
+	padding: 10px 15px;
+	background-color: #EBF7E3;
+	background-color: white;
+	font-size: 16px;
+	font-weight: normal;
+	
+}	
+
+
+.modal-header .title {
+	/*font-size: 30px;*/
+	
+}
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, .5);
+	pointer-events: none;
+}
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+

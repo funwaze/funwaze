@@ -1,0 +1,223 @@
+:root{
+  --main-radius:5px;
+  --main-padding:5px;
+    font-family: "Inter", Sans-serif; 
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.maincontainer {
+margin: 0px;
+margin-top: 10px;
+margin-bottom: 10px;
+display: grid;
+color: black;
+height: 100vh;
+grid-template-columns: repeat(4,1fr); 
+grid-template-rows: (.2fr 2fr auto 1fr 1fr 1fr 1fr 1fr); 
+grid-template-areas:
+"nav nav nav nav"
+"phead phead phead phead"
+"fpheader fpheader fpheader fpheader"
+"featuredPosts featuredPosts featuredPosts featuredPosts"
+"lpheader lpheader lpheader lpheader"
+"latestPosts latestPosts latestPosts latestPosts"
+"paddedspace paddedspace paddedspace paddedspace"
+"footer footer footer footer";
+
+}
+
+ 
+
+
+#phead {
+  background-color: #F56600;
+  background-color: #66B032;
+
+ background-repeat: no-repeat; 
+ background-size: cover; 
+  height: 250px;
+  grid-area: phead;
+  color: #F5F5F5;
+  font-size: 25px;  
+  font-weight: 100;
+    width: 100%;
+  padding-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+  text-align: center;
+  }
+  
+#fpheader {
+	
+	background-color: white;
+ /* background-color: #66B032; */
+  background-repeat: no-repeat; 
+ background-size: cover; 
+  height: 440px;
+  grid-area: fpheader;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+  /*  width: 100%; */
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-bottom: 30px;
+
+  }
+#featuredPosts {
+	display: flex;
+  background-color: white;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  height: 420px;
+  grid-area: featuredPosts;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+  width: 90%; 
+  padding-top: 10px;
+  padding-left: 0px;
+  text-align: left;
+  }
+  
+  .fPosts {
+  background-color: white;
+  height: 400px;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+  width: 33%;
+  padding-top: 10px;
+  padding-left: 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+  text-align: left;
+  }
+  #lpheader {
+	
+	background-color: white;
+   background-repeat: no-repeat; 
+   background-size: cover; 
+  height: 880px;
+  grid-area: lpheader;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-bottom: 100px;
+
+  }
+  
+  .latestPosts {
+	  display: flex; 
+	  flex-wrap: wrap;
+  background-color: #F56600;
+  background-color: white;
+  background-repeat: no-repeat; 
+ background-size: cover; 
+  height: 420px;
+  grid-area: latestPosts;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+    width: 90%;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  text-align: left;
+  }
+  .featuredPosts .latestPosts div {
+	  width: 100%;
+	  height: 200px;
+  }
+  
+  .featuredPosts, .latestPosts {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap to the next line */
+	gap: 20px;
+	
+}
+.lPosts {
+  background-color: white;
+  height: 400px;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+  width: 33%;
+  padding-top: 10px;
+  padding-left: 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+  text-align: left;
+  }
+  
+.featuredPosts .fPosts, .latestPosts .lPosts {
+    width: 30%; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    border: 1px solid black;
+    text-align: center;
+	border-radius: 6px;
+	padding: 10px;
+}
+
+  .fPostsPic1 {
+	  background-size: cover; 
+	  width: 100%;
+	  height: 200px;
+	  background-image: url("https://images.pexels.com/photos/5415712/pexels-photo-5415712.jpeg?auto=compress&cs=tinysrgb&w=600");
+  }
+    .fPostsPic2 {
+	  background-size: cover; 
+	  width: 100%;
+	  height: 200px;
+	  background-image: url("https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/3832ee8b-e141-4640-99fc-0e5ee7aa6ba8/__The_Non-techie_who_created_a_viral_A.I_app.jpg");
+  }
+    .fPostsPic3 {
+	  background-size: cover; 
+	  width: 100%;
+	  height: 200px;
+	  background-image: url("https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/3832ee8b-e141-4640-99fc-0e5ee7aa6ba8/__The_Non-techie_who_created_a_viral_A.I_app.jpg");
+  }
+  .fPostsData {
+	  background-size: cover; 
+	  width: 100%;
+	  height: 170px;
+	   }
+  
+
+ .allposts {
+  background-color: white;
+  height: 400px;
+  color: black;
+  font-size: 18px;  
+  font-weight: 100;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 0px;
+ 
+  }
+  
+#fname {
+  width: 200px;
+  height: 15px;
+  padding: 12px;
+ }
+ #lname {
+  width: 200px;
+  height: 15px;
+  padding: 12px;
+ }
+#state {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  
+ }
+  
+ #subject {
+  width: 400px;
+  height: 15px;
+  padding: 12px;
+ }  
+
+  
+  

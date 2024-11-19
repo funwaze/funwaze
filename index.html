@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!-- Fun Aid Comment -->
+<html>
+<head>
+<title> FunWaze</title>
+<link rel="stylesheet" href="styles/funwaze.css">
+<link rel="stylesheet" href="styles/headfoot.css">
+
+<script src="js/location1.js" defer></script> 
+<script src="js/location2.js" defer></script> 
+<script src="js/location3.js" defer></script> 
+<script src="js/location4.js" defer></script> 
+<script src="js/activity1.js" defer></script>
+<script src="js/activity12.js" defer></script>
+<script src="js/funwaze.js" defer></script> 
+
+</head>
+
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://fonts.googleapis.com/css? family=Inter SC:400,800,900&disdplay=swap" rel="stylesheet"> 
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <div class="modal" id="modal">
+  <!--<div class="modal-content"-->
+  <div class="modal-header">
+  <div class="modal-title" id="mTitle"> Example Modal</div>
+  <button data-close-button class="close-button" onclick="closeModal()">&times;</button>
+  </div>
+  <div class="modal-body" id="mBody"> 
+  </div>
+  </div>
+  <div id="overlay">  </div>
+  
+  
+ 
+
+<div class="maincontainer">
+<nav id="nav"> 
+<div class="navlogo"> <a href="index.html" style=" text-decoration: none" >FunWaze</a> </div>
+<div class="navbuttons"> 
+<a a href="index.html" style="color: white; text-decoration: none; padding: 14px 16px" >Home</a> 
+<a a href="aboutus.html" style="color: white; text-decoration: none; padding: 14px 16px">About Us</a>
+<a a href="contactus.html" style="color: white; text-decoration: none; padding: 14px 16px">Contact Us</a> 
+<a a href="index.html" style="color: white; text-decoration: none; padding: 14px 16px; display: hidden" > &nbsp   </a>
+</div>
+
+ 
+    </nav>
+<div id="head" class="header">
+  
+  <p style="font-size: 25px" > Who Knew Life Could Be So Fun?</p>
+  <p style="font-size: 22px; color: #32373c; font-weight: 700" > Bored? Looking for fun waze to have fun locally? <br></p>
+<p style="font-size: 20px; color: white">   Simply enter a zip code and we'll do the rest. </p>
+    
+    
+ 
+
+    <label for="time">
+      Time: 
+	  </label>
+    <input type="text" placeholder="Hours/Minutes(1 Hour/30 Minutes)" id="time" name="time">
+    <label for="location">
+      &nbsp Location:
+    </label>
+    <input type="text" placeholder="Zip Code" id="zip" >
+	<input type="button" id="sButton" value="Search" class="searchButton">
+	  
+    </div> 
+	
+       <div id="filterb" class="filters">
+	   
+        <button id="filter1" class="filterButtons" > Kid Friendly </button>
+          <button id="filter2" class="filterButtons"> Dog Friendly </button>
+            <button id="filter3" class="filterButtons"> Free </button>
+              <button id="filter4" class="filterButtons"> Indoors </button>
+                <button id="filter5" class="filterButtons"> Outdoors </button>
+				
+     </div>
+                
+<div id="sidebar" class="sidebar">
+<h3>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Important Dates</h3>
+<p style="font-size: 18px; color: black; font-weight: 300">   Simply enter a zip code and we'll do the rest. </p>
+</div>
+
+    <div id="mainr" class="mainresults">
+	
+	 
+          
+    <h4>Results</h4>
+	
+    <h2>Accordion</h2>
+
+    <button data-modal-target="#modal" id=but1 class="accordion" onclick="drillDown()">Section 1</button>
+    <div class="panel">
+      <p id="results1"></p>
+	  <p id="name1"></p>
+	  <p id="type1"></p>
+	  <p id="act1"></p>
+	  <p id="street1"></p>
+	  <p id="city1"></p>
+	  <p id="state1"></p>
+	  <p id="zip1"></p>
+	  <p id="description1"></p>
+	  <p id="free1"></p>
+	  <p id="pet1"></p>
+	  <p id="kids1"></p>
+	  <p id="inorout1"></p>
+	  <p id="hours1"></p>
+	  <p id="price1"></p>
+	  <p id="food1"></p>
+	  <p id="keyword1"></p>
+	  
+    </div>
+    <button id=but2 class="accordion" onclick="drillDown()">Section 2</button>
+    <div class="panel">
+      <p id="results2"></p>
+	  <p id="name2"></p>
+	  <p id="type2"></p>
+	  <p id="act2"></p>
+	  <p id="street2"></p>
+	  <p id="city2"></p>
+	  <p id="state2"></p>
+	  <p id="zip2"></p>
+	  <p id="description2"></p>
+	  <p id="free2"></p>
+	  <p id="pet2"></p>
+	  <p id="kids2"></p>
+	  <p id="inorout2"></p>
+	  <p id="hours2"></p>
+	  <p id="price2"></p>
+	  <p id="food2"></p>
+	  <p id="keyword2"></p>
+    </div>
+
+    <button id=but3 class="accordion" onclick="drillDown()">Section 3</button>
+    <div class="panel">
+      <p id="results3"></p>
+	  <p id="name3"></p>
+	  <p id="type3"></p>
+	  <p id="act3"></p>
+	  <p id="street3"></p>
+	  <p id="city3"></p>
+	  <p id="state3"></p>
+	  <p id="zip3"></p>
+	  <p id="description3"></p>
+	  <p id="free3"></p>
+	  <p id="pet3"></p>
+	  <p id="kids3"></p>
+	  <p id="inorout3"></p>
+	  <p id="hours3"></p>
+	  <p id="price3"></p>
+	  <p id="food3"></p>
+	  <p id="keyword3"></p>
+    </div>
+	<button id=but4 class="accordion" onclick="drillDown()">Section 1</button>
+    <div class="panel">
+      <p id="results4"></p>
+	  <p id="name4"></p>
+	  <p id="type4"></p>
+	  <p id="act4"></p>
+	  <p id="street4"></p>
+	  <p id="city4"></p>
+	  <p id="state4"></p>
+	  <p id="zip4"></p>
+	  <p id="description4"></p>
+	  <p id="free4"></p>
+	  <p id="pet4"></p>
+	  <p id="kids4"></p>
+	  <p id="inorout4"></p>
+	  <p id="hours4"></p>
+	  <p id="price4"></p>
+	  <p id="food4"></p>
+	  <p id="keyword4"></p>
+    </div>
+    <button id=but5 class="accordion" onclick="drillDown()">Section 2</button>
+    <div class="panel">
+      <p id="results5"></p>
+	  <p id="name5"></p>
+	  <p id="type5"></p>
+	  <p id="act5"></p>
+	  <p id="street5"></p>
+	  <p id="city5"></p>
+	  <p id="state5"></p>
+	  <p id="zip5"></p>
+	  <p id="description5"></p>
+	  <p id="free5"></p>
+	  <p id="pet5"></p>
+	  <p id="kids5"></p>
+	  <p id="inorout5"></p>
+	  <p id="hours5"></p>
+	  <p id="price5"></p>
+	  <p id="food5"></p>
+	  <p id="keyword5"></p>
+    </div>
+
+    <button id=but6 class="accordion" onclick="drillDown()">Section 3</button>
+    <div class="panel">
+      <p id="results6"></p>
+	  <p id="name6"></p>
+	  <p id="type6"></p>
+	  <p id="act6"></p>
+	  <p id="street6"></p>
+	  <p id="city6"></p>
+	  <p id="state6"></p>
+	  <p id="zip6"></p>
+	  <p id="description6"></p>
+	  <p id="free6"></p>
+	  <p id="pet6"></p>
+	  <p id="kids6"></p>
+	  <p id="inorout6"></p>
+	  <p id="hours6"></p>
+	  <p id="price6"></p>
+	  <p id="food6"></p>
+	  <p id="keyword6"></p>
+    </div>
+	<button id=but7 class="accordion" onclick="drillDown()">Section 1</button>
+    <div class="panel">
+      <p id="results7"></p>
+	  <p id="name7"></p>
+	  <p id="type7"></p>
+	  <p id="act7"></p>
+	  <p id="street7"></p>
+	  <p id="city7"></p>
+	  <p id="state7"></p>
+	  <p id="zip7"></p>
+	  <p id="description7"></p>
+	  <p id="free7"></p>
+	  <p id="pet7"></p>
+	  <p id="kids7"></p>
+	  <p id="inorout7"></p>
+	  <p id="hours7"></p>
+	  <p id="price7"></p>
+	  <p id="food7"></p>
+	  <p id="keyword7"></p>
+    </div>
+    <button id=but8 class="accordion" onclick="drillDown()">Section 2</button>
+    <div class="panel">
+      <p id="results8"></p>
+	  <p id="name8"></p>
+	  <p id="type8"></p>
+	  <p id="act8"></p>
+	  <p id="street8"></p>
+	  <p id="city8"></p>
+	  <p id="state8"></p>
+	  <p id="zip8"></p>
+	  <p id="description8"></p>
+	  <p id="free8"></p>
+	  <p id="pet8"></p>
+	  <p id="kids8"></p>
+	  <p id="inorout8"></p>
+	  <p id="hours8"></p>
+	  <p id="price8"></p>
+	  <p id="food8"></p>
+	  <p id="keyword8"></p>
+    </div>
+
+    <button id=but9 class="accordion" onclick="drillDown()">Section 8</button>
+    <div class="panel">
+      <p id="results9"></p>
+	  <p id="name9"></p>
+	  <p id="type9"></p>
+	  <p id="act9"></p>
+	  <p id="street9"></p>
+	  <p id="city9"></p>
+	  <p id="state9"></p>
+	  <p id="zip9"></p>
+	  <p id="description9"></p>
+	  <p id="free9"></p>
+	  <p id="pet9"></p>
+	  <p id="kids9"></p>
+	  <p id="inorout9"></p>
+	  <p id="hours9"></p>
+	  <p id="price9"></p>
+	  <p id="food9"></p>
+	  <p id="keyword9"></p>
+    </div>
+	<button id=but10 class="accordion" onclick="drillDown()">Section 1</button>
+    <div class="panel">
+      <p id="results10"></p>
+	  <p id="name10"></p>
+	  <p id="type10"></p>
+	  <p id="act10"></p>
+	  <p id="street10"></p>
+	  <p id="city10"></p>
+	  <p id="state10"></p>
+	  <p id="zip10"></p>
+	  <p id="description10"></p>
+	  <p id="free10"></p>
+	  <p id="pet10"></p>
+	  <p id="kids10"></p>
+	  <p id="inorout10"></p>
+	  <p id="hours10"></p>
+	  <p id="price10"></p>
+	  <p id="food10"></p>
+	  <p id="keyword10"></p>
+    </div>
+    <button id=but11 class="accordion" onclick="drillDown()">Section 2</button>
+    <div class="panel">
+      <p id="results11"></p>
+	  <p id="name11"></p>
+	  <p id="type11"></p>
+	  <p id="act11"></p>
+	  <p id="street11"></p>
+	  <p id="city11"></p>
+	  <p id="state11"></p>
+	  <p id="zip11"></p>
+	  <p id="description11"></p>
+	  <p id="free11"></p>
+	  <p id="pet11"></p>
+	  <p id="kids11"></p>
+	  <p id="inorout11"></p>
+	  <p id="hours11"></p>
+	  <p id="price11"></p>
+	  <p id="food11"></p>
+	  <p id="keyword11"></p>
+    </div>
+
+    <button id=but12 class="accordion" onclick="drillDown()">Section 12</button>
+    <div class="panel">
+      <p id="results12"></p>
+	  <p id="name12"></p>
+	  <p id="type12"></p>
+	  <p id="act12"></p>
+	  <p id="street12"></p>
+	  <p id="city12"></p>
+	  <p id="state12"></p>
+	  <p id="zip12"></p>
+	  <p id="description12"></p>
+	  <p id="free12"></p>
+	  <p id="pet12"></p>
+	  <p id="kids12"></p>
+	  <p id="inorout12"></p>
+	  <p id="hours12"></p>
+	  <p id="price12"></p>
+	  <p id="food12"></p>
+	  <p id="keyword12"></p>
+    </div>
+	    <button id=but13 class="accordion" onclick="drillDown()">Section 1</button>
+    <div class="panel">
+      <p id="results13"></p>
+	  <p id="name13"></p>
+	  <p id="type13"></p>
+	  <p id="act13"></p>
+	  <p id="street13"></p>
+	  <p id="city13"></p>
+	  <p id="state13"></p>
+	  <p id="zip13"></p>
+	  <p id="description13"></p>
+	  <p id="free13"></p>
+	  <p id="pet13"></p>
+	  <p id="kids13"></p>
+	  <p id="inorout13"></p>
+	  <p id="hours13"></p>
+	  <p id="price13"></p>
+	  <p id="food13"></p>
+	  <p id="keyword13"></p>
+    </div>
+    <button id=but14 class="accordion" onclick="drillDown()">Section 2</button>
+    <div class="panel">
+      <p id="results14"></p>
+	  <p id="name14"></p>
+	  <p id="type14"></p>
+	  <p id="act14"></p>
+	  <p id="street14"></p>
+	  <p id="city14"></p>
+	  <p id="state14"></p>
+	  <p id="zip14"></p>
+	  <p id="description14"></p>
+	  <p id="free14"></p>
+	  <p id="pet14"></p>
+	  <p id="kids14"></p>
+	  <p id="inorout14"></p>
+	  <p id="hours14"></p>
+	  <p id="price14"></p>
+	  <p id="food14"></p>
+	  <p id="keyword14"></p>
+    </div>
+
+    <button id=but15 class="accordion" onclick="drillDown()">Section 3</button>
+    <div class="panel">
+      <p id="results15"></p>
+	  <p id="name15"></p>
+	  <p id="type15"></p>
+	  <p id="act15"></p>
+	  <p id="street15"></p>
+	  <p id="city15"></p>
+	  <p id="state15"></p>
+	  <p id="zip15"></p>
+	  <p id="description15"></p>
+	  <p id="free15"></p>
+	  <p id="pet15"></p>
+	  <p id="kids15"></p>
+	  <p id="inorout15"></p>
+	  <p id="hours15"></p>
+	  <p id="price15"></p>
+	  <p id="food15"></p>
+	  <p id="keyword15"></p>
+    </div>
+	<button id=but16 class="accordion" onclick="drillDown()">Section 1</button>
+    <div class="panel">
+      <p id="results16"></p>
+	  <p id="name16"></p>
+	  <p id="type16"></p>
+	  <p id="act16"></p>
+	  <p id="street16"></p>
+	  <p id="city16"></p>
+	  <p id="state16"></p>
+	  <p id="zip16"></p>
+	  <p id="description16"></p>
+	  <p id="free16"></p>
+	  <p id="pet16"></p>
+	  <p id="kids16"></p>
+	  <p id="inorout16"></p>
+	  <p id="hours16"></p>
+	  <p id="price16"></p>
+	  <p id="food16"></p>
+	  <p id="keyword16"></p>
+    </div>
+    <button id=but17 class="accordion" onclick="drillDown()">Section 2</button>
+    <div class="panel">
+      <p id="results17"></p>
+	  <p id="name17"></p>
+	  <p id="type17"></p>
+	  <p id="act17"></p>
+	  <p id="street17"></p>
+	  <p id="city17"></p>
+	  <p id="state17"></p>
+	  <p id="zip17"></p>
+	  <p id="description17"></p>
+	  <p id="free17"></p>
+	  <p id="pet17"></p>
+	  <p id="kids17"></p>
+	  <p id="inorout17"></p>
+	  <p id="hours17"></p>
+	  <p id="price17"></p>
+	  <p id="food17"></p>
+	  <p id="keyword17"></p>
+    </div>
+
+    <button id=but18 class="accordion" onclick="drillDown()">Section 3</button>
+    <div class="panel">
+      <p id="results18"></p>
+	  <p id="name18"></p>
+	  <p id="type18"></p>
+	  <p id="act18"></p>
+	  <p id="street18"></p>
+	  <p id="city18"></p>
+	  <p id="state18"></p>
+	  <p id="zip18"></p>
+	  <p id="description18"></p>
+	  <p id="free18"></p>
+	  <p id="pet18"></p>
+	  <p id="kids18"></p>
+	  <p id="inorout18"></p>
+	  <p id="hours18"></p>
+	  <p id="price18"></p>
+	  <p id="food18"></p>
+	  <p id="keyword18"></p>
+    </div>
+	<button id=but19 class="accordion" onclick="drillDown()">Section 1</button>
+    <div class="panel">
+      <p id="results19"></p>
+	  <p id="name19"></p>
+	  <p id="type19"></p>
+	  <p id="act19"></p>
+	  <p id="street19"></p>
+	  <p id="city19"></p>
+	  <p id="state19"></p>
+	  <p id="zip19"></p>
+	  <p id="description19"></p>
+	  <p id="free19"></p>
+	  <p id="pet19"></p>
+	  <p id="kids19"></p>
+	  <p id="inorout19"></p>
+	  <p id="hours19"></p>
+	  <p id="price19"></p>
+	  <p id="food19"></p>
+	  <p id="keyword19"></p>
+    </div>
+    <button id=but20 class="accordion" onclick="drillDown()">Section 2</button>
+    <div class="panel">
+      <p id="results20"></p>
+	  <p id="name20"></p>
+	  <p id="type20"></p>
+	  <p id="act20"></p>
+	  <p id="street20"></p>
+	  <p id="city20"></p>
+	  <p id="state20"></p>
+	  <p id="zip20"></p>
+	  <p id="description20"></p>
+	  <p id="free20"></p>
+	  <p id="pet20"></p>
+	  <p id="kids20"></p>
+	  <p id="inorout20"></p>
+	  <p id="hours20"></p>
+	  <p id="price20"></p>
+	  <p id="food20"></p>
+	  <p id="keyword20"></p>
+    </div>
+
+    <button id=but21 class="accordion" onclick="drillDown()">Section 3</button>
+    <div class="panel">
+      <p id="results21"></p>
+	  <p id="name21"></p>
+	  <p id="type21"></p>
+	  <p id="act21"></p>
+	  <p id="street21"></p>
+	  <p id="city21"></p>
+	  <p id="state21"></p>
+	  <p id="zip21"></p>
+	  <p id="description21"></p>
+	  <p id="free21"></p>
+	  <p id="pet21"></p>
+	  <p id="kids21"></p>
+	  <p id="inorout21"></p>
+	  <p id="hours21"></p>
+	  <p id="price21"></p>
+	  <p id="food21"></p>
+	  <p id="keyword21"></p>
+    </div>
+	<button id=but22 class="accordion" onclick="drillDown()">Section 1</button>
+    <div class="panel">
+      <p id="results22"></p>
+	  <p id="name22"></p>
+	  <p id="type22"></p>
+	  <p id="act22"></p>
+	  <p id="street22"></p>
+	  <p id="city22"></p>
+	  <p id="state22"></p>
+	  <p id="zip22"></p>
+	  <p id="description22"></p>
+	  <p id="free22"></p>
+	  <p id="pet22"></p>
+	  <p id="kids22"></p>
+	  <p id="inorout22"></p>
+	  <p id="hours22"></p>
+	  <p id="price22"></p>
+	  <p id="food22"></p>
+	  <p id="keyword22"></p>
+    </div>
+    <button id=but23 class="accordion" onclick="drillDown()">Section 2</button>
+    <div class="panel">
+      <p id="results23"></p>
+	  <p id="name23"></p>
+	  <p id="type23"></p>
+	  <p id="act23"></p>
+	  <p id="street23"></p>
+	  <p id="city23"></p>
+	  <p id="state23"></p>
+	  <p id="zip23"></p>
+	  <p id="description23"></p>
+	  <p id="free23"></p>
+	  <p id="pet23"></p>
+	  <p id="kids23"></p>
+	  <p id="inorout23"></p>
+	  <p id="hours23"></p>
+	  <p id="price23"></p>
+	  <p id="food23"></p>
+	  <p id="keyword23"></p>
+    </div>
+
+    <button id=but24 class="accordion" onclick="drillDown()">Section 3</button>
+    <div class="panel">
+      <p id="results24"></p>
+	  <p id="name24"></p>
+	  <p id="type24"></p>
+	  <p id="act24"></p>
+	  <p id="street24"></p>
+	  <p id="city24"></p>
+	  <p id="state24"></p>
+	  <p id="zip24"></p>
+	  <p id="description24"></p>
+	  <p id="free24"></p>
+	  <p id="pet24"></p>
+	  <p id="kids24"></p>
+	  <p id="inorout24"></p>
+	  <p id="hours24"></p>
+	  <p id="price24"></p>
+	  <p id="food24"></p>
+	  <p id="keyword24"></p>
+    </div>
+	
+	 <button id=but25 class="accordion" onclick="drillDown()">Section 3</button>
+    <div class="panel">
+      <p id="results25"></p>
+	  <p id="name25"></p>
+	  <p id="type25"></p>
+	  <p id="act25"></p>
+	  <p id="street25"></p>
+	  <p id="city25"></p>
+	  <p id="state25"></p>
+	  <p id="zip25"></p>
+	  <p id="description25"></p>
+	  <p id="free25"></p>
+	  <p id="pet25"></p>
+	  <p id="kids25"></p>
+	  <p id="inorout25"></p>
+	  <p id="hours25"></p>
+	  <p id="price25"></p>
+	  <p id="food25"></p>
+	  <p id="keyword25"></p>
+    </div>
+	
+    <p id="demo"></p>
+    <p id="demo2"></p>
+     </div>
+	 <div id="paddedspace" class="paddedspace">paddedspace</div>
+
+<footer>
+<div id="footcolumn1">FunWaze <br> <br>
+<a href="https://www.linkedin.com/in/fun-waze-448b91332/"target="_blank"<i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/@FunWaze"target="_blank"<i class="fa-brands fa-youtube"></i></a>
+<a href="https://www.example.com"<i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.example.com"<i class="fa-brands fa-tiktok"></i></a>
+
+</div>
+<div id="footcolumn2"> W H Y &nbsp  W E ' R E &nbsp  H E R E <br> <p id="note">Whether you’re looking for recreation <br> or relaxation, you can find it here with<br> FunWaze.<br> <br>Drop us a line – we’ll help you find <br> what you're looking for!</p> </div>
+<div id="footcolumn3">N E W S L E T T E R &nbsp  S I G N - U P <br> 
+<p id="signup"> Sign-up to get the latest fun trends, <br> fun tips and fun ideas!!! </p> 
+<!--<label for "email"> Email Address: </label> -->
+<form action="https://api.web3forms.com/submit" method="POST">
+ <input type="hidden" name="access_key" value="43d0f774-80fe-43a4-a677-afa5ffc80b05">
+	 <input type="email" placeholder="email@example.com" id="subemail" name="email" required > <br> <br>
+     <!--<label for "firstName"> First Name: </label> -->
+	 <input type="text" placeholder="FirstName" id="subfname" name="name" required> 	 
+	  <!-- <label for "defaultZipCode"> Default Zip Code: </label> -->
+	 <input type="text" placeholder="DefaultZipCode" id="subzip" name="zipcode"> <br><br>
+	<input type="submit" id="eButton" value="SUBSCRIBE" class="emailButton"></div>
+</form>
+<div id="footcolumn4">MORE&nbspTHINGS <br> <br>
+<a a href="contactus.html"style="color: white; text-decoration: none">Contact Us<br><br></a> 
+<a a href="aboutus.html"style="color: white; text-decoration: none">About Us<br><br></a> 
+<a a href="contactus.html"style="color: white; text-decoration: none">Submit Your Suggestions<br><br></a> 
+</div>
+</footer> 
+</div>
+
+        
+
+
+
+</div>
+</body>
